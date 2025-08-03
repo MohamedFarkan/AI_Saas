@@ -1,0 +1,23 @@
+last seen - 6hr:36min
+
+Frontend part completed - 28/july/2025
+
+Pages:
+  1.Home
+  2.Dashboard
+  3.Blog generator - Gemini API
+  4.Image generator - [Image generated using Clipdrop API and saved in cloudinary]
+  5.Remove background
+  6.Remove object
+  7.Write Article - Gemini API
+  8.Review Resume
+  9.Community
+
+Technologies:
+  1.PERN (Postgres, Express, React, Node)
+  2.Clerk Authentication
+  3.Clerk Payment gateway
+  4.NEON - Fully managed serverless Postgres database
+           NEON is used here to store AI generated data
+
+  

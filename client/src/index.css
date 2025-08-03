@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+* {
+  font-family: "Outfit", sans-serif;
+}
+
+@theme {
+  --color-primary: #5044e5;
+}
+
+.reset-tw,
+.reset-tw * {
+  all: revert !important;
+}
+
+.cl-drawerRoot {
+  z-index: 10;
+}
+
+html.dark body {
+  background-color: #121212;
+  color: white;
+}
+
+html.dark .sidebar {
+  background-color: #333;
+  color: #eee;
+}
+
+.bg-light-background {
+  background-color: #f4f7fb;
+  color: #111;
+}
+
+/* When html has .dark class, override colors */
+html.dark .bg-light-background {
+  background-color: #121212;
+  color: white;
+}
+
+/* Sidebar default (light) */
+.sidebar {
+  background-color: white;
+  border-color: #e5e7eb; /* Tailwind gray-200 */
+  color: #374151; /* Tailwind gray-700 for text */
+}
+
+/* Sidebar dark mode */
+html.dark .sidebar {
+  background-color: #1f2937; /* Tailwind gray-800 */
+  border-color: #374151; /* Tailwind gray-700 */
+  color: #d1d5db; /* Tailwind gray-300 for text */
+}
+
+/* NavLink default */
+.nav-link {
+  color: inherit;
+}
+
+/* NavLink hover in light */
+.nav-link:hover {
+  background-color: #d1d5db; /* Tailwind gray-300 */
+}
+
+/* NavLink active in light */
+.nav-link.active {
+  background: linear-gradient(to right, #3c81f6, #9234ea);
+  color: white;
+}
+
+/* NavLink hover in dark */
+html.dark .nav-link:hover {
+  background-color: #374151; /* Tailwind gray-700 */
+}
+
+/* NavLink active in dark */
+html.dark .nav-link.active {
+  background: linear-gradient(to right, #3c81f6, #9234ea);
+  color: white;
+}
+
+/* Icon colors */
+.icon {
+  color: inherit;
+}
+
+html.dark .icon {
+  color: #d1d5db; /* lighter in dark */
+}
+
+html.dark .icon.active {
+  color: white;
+}

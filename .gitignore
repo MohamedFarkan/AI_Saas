@@ -1,0 +1,38 @@
+# Root-level .gitignore (AI-SAAS/.gitignore)
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Node modules
+client/node_modules/
+server/node_modules/
+
+# Builds
+client/dist/
+client/build/
+server/dist/
+server/build/
+
+# Env files
+.env
+client/.env
+server/.env
+
+# Editor settings
+.vscode/
+.idea/
+.DS_Store
+
+# Local config
+*.local
+*.env.local
+
+# Others
+*.suo
+*.njsproj
+*.sln
+*.sw?
