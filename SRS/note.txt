@@ -5,7 +5,7 @@ Frontend part completed - 28/july/2025
 Pages:
   1.Home
   2.Dashboard
-  3.Blog generator - Gemini API
+  3.Blog title generator - Gemini API
   4.Image generator - [Image generated using Clipdrop API and saved in cloudinary]
   5.Remove background
   6.Remove object

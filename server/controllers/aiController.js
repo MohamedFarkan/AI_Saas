@@ -34,6 +34,7 @@ export const generateArticle = async (req, res) => {
       ],
       temperature: 0.7,
       max_tokens: length,
+      //max_tokens: Math.min(length, 800),
     });
 
     const content = response.choices[0].message.content;
@@ -50,7 +51,9 @@ export const generateArticle = async (req, res) => {
 
     res.json({ success: true, content });
   } catch (error) {
-    console.log(error.message);
+    // console.log(error.message);
+    // res.json({ success: false, message: error.message });
+    console.log("FULL ERROR:", error.response?.data || error);
     res.json({ success: false, message: error.message });
   }
 };
@@ -122,12 +125,12 @@ export const generateImage = async (req, res) => {
           "x-api-key": process.env.CLIPDROP_API_KEY,
         },
         responseType: "arraybuffer",
-      }
+      },
     );
 
     const base64Image = `data:image/png;base64,${Buffer.from(
       data,
-      "binary"
+      "binary",
     ).toString("base64")}`;
 
     const { secure_url } = await cloudinary.uploader.upload(base64Image);
